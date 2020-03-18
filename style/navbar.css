@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pirata+One&display=swap');
+
+:root {
+  --body-color: #DBB982;
+  --light-color: #FFF2EF;
+  --text-color: #D82D3E;
+}
+
+h1{
+  color: var(--text-color);
+  font-family: 'Pirata One';
+  text-align: center;
+  font-size: 64px;
+}
+
+body{
+  background-color: var(--light-color);
+  width: 60%;
+  margin: auto;
+}
+
+/* NAvbar Général */
+
+.navbar
+{
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--text-color);
+  width: 100%;
+  height: auto;
+  border-radius: 1px;
+}
+
+/* parti Logo */
+
+ .navbar .logo img
+ {
+   display: flex;
+   justify-content: flex-start;
+   width: 50px;
+ }
+  .navbar div.logo{
+   display: flex;
+   justify-content: flex-start;
+   width: 11%;
+   margin-right: 11px;
+ }
+  div.logo{
+   
+   width: 100%;
+ }
+
+/* les liens */
+div.links{ display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+ .links a.lien{
+   display: inline-flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-direction: row;
+   text-decoration: none;
+   color: var(--light-color);
+   font-family: 'Pirata One';
+
+ }
+ .links .lien:hover
+ {
+   color: var(--hover);
+ }
+
+ /*Menu caché desktop */
+
+ .hiddenmenu
+ {
+   display: none;
+ }
+ #closemenu{
+   display: none;
+ }
+
+/* Version mobile */
+@media screen and (max-width:600px) {
+
+  /*liens menu*/
+
+  div.links {display: none;}
+
+  .links:target{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 90%;
+    height: 44%;
+    background-color: var(--text-color);
+    border-radius: 1px;
+    flex-direction: column-reverse;
+    align-items: center;
+
+  }
+
+  /*Navbar général*/
+  
+  .navbar{
+    display: flex;
+    height: 40px;
+    position: fixed;
+    width: 90%;
+    z-index: 2;
+    top: 0;
+   }
+
+  /* Menu caché qui va apparaitre avec la media query */
+ 
+  .hiddenmenu{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .fa, .fas{
+    margin: 10px;
+    color: var(--light-color);
+  }
+  .fa, .fas:hover{
+    color: var(--hover);
+  }
+
+  #closemenu{
+    display: flex;
+  }
+
+
+
+
+
+
+
+}

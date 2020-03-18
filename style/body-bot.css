@@ -1,0 +1,200 @@
+:root {
+  --border-color: rgb(53, 42, 42);
+  --back-color:rgb(212, 217, 219);
+  --bgColor:#ffdada00;
+  --menuderoulant: #D82D3E;
+}
+
+body{
+  background-color: rgb(3, 3, 218);
+}
+
+p, header a, main a{
+  font-family: sen, 'Arial';
+  font-size: 25px;
+}
+
+/*Contient tout les blocks*/
+.conteneur{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+}
+/*fin*/
+
+.titreCompetences1{
+  text-align: center;
+}
+
+.titreCompetences1{
+  margin-left: 2%;
+}
+
+.conteneurObjectifsInterets, .conteneurEnnemis, .conteneurCompetences{
+  background-color: var(--bgColor);
+}
+
+/*image*/
+.fruitDuDemon{
+  width: 100px;
+  height: 120px;
+}
+
+.tresor{
+  width: 150px;
+  height: 150px;
+}
+
+.corde{
+  width: 100%;
+}
+/**/
+
+.conteneurObjectifsInterets{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: stretch;
+  width: 100%;
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-top: 1%;
+}
+
+.conteneurEnnemis{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  margin-top: 1%;
+  width: 100%;
+}
+.ennemisBattuTexte{
+  text-align: center;
+}
+
+.conteneurCompetences{
+  background-color: var(--bgColor);
+  width: 100%;
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-top: 1%;
+}
+
+/*Menu déroulant*/
+.ulMenuDeroulant{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.navMenu{
+  width: 100%;
+  background-color:var(--bgColor);
+  top: 0px;
+}
+
+.navMenu, .ulMenuDeroulant, .sous{
+  list-style-type: none;
+}
+
+.navMenu ul li{
+  float: left;
+  width: 25%;
+  text-align: center;
+  position: relative;
+}
+
+.deroulant{
+display: flex;
+justify-content: center;
+}
+
+.navMenu .lienMenuDeroulant {
+  display: block;
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid transparent;
+  padding: 10px 0px;
+}
+
+.sous {
+  display: none;
+  box-shadow: 0px 1px 1px var(--border-color);
+  background-color: var(--bgColor);
+  position: absolute;
+  width: 100%;
+}
+
+.navMenu > ul li:hover .sous{
+  display: block;
+  min-width: 100px;
+  background-color:var(--menuderoulant);
+  z-index: 1;
+}
+
+.sous li{
+  float: none;
+  width: 100%;
+  text-align: left;
+  min-width: 100px;
+  background-color: var(--menuderoulant);
+}
+
+/*.sous .couleur{
+  padding: 10px;
+  border-bottom: none;
+}
+
+.sous .GumGum:hover{
+  border-bottom: none;
+  background-color: var(--bgColor);
+}*/
+
+.deroulant > .lienMenuDeroulant::after{
+  content:" ▼";
+  font-size: 10px;
+  color: black;
+}
+
+.GumGum{
+  color: black;
+}
+
+/*Fin Menu Deroulant*/
+
+@media screen and ( max-width: 901px){
+
+  .conteneurObjectifsInterets, .conteneurCompetences{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+  .conteneurEnnemis{
+    padding: 40px;
+    width: auto;
+  }
+  .GumGum{
+    margin-right: 150px;
+    text-align: left;
+  }
+  .ulMenuDeroulant{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 5%;
+  }
+  .sous{
+    width: 110px;
+  }
+
+}

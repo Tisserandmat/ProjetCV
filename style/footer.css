@@ -1,0 +1,190 @@
+@media screen and (max-width: 901px) {
+  footer{
+    margin: auto;
+    width:100%;
+    height:100%!important;
+  }
+
+  footer ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding:0!important;
+  }
+
+  footer li{
+    font-size: 40px!important;
+    width: 15%;
+    margin: 8px;
+  }
+
+  .boat{
+    display: none;
+  }
+
+  form input{
+    width: 75%!important;
+    opacity: 1!important;
+  }
+
+  form{
+    background-image: none!important;
+    background-position: top!important;
+    height:auto!important;
+  }
+
+  .form{
+    background-image: none!important;
+  }
+
+  .first{
+    margin:0!important;
+  }
+
+  .what{
+    margin:7px!important;
+  }
+
+  form input[type=submit]{
+    width:77px!important;
+  }
+
+}
+
+footer{
+  height:110px;
+  background-color: var(--text-color);
+}
+
+footer ul{
+  padding-top: 32px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  animation: animatedBoat 2s linear infinite alternate;
+}
+
+form label, form input{
+  font-family: 'Pirata One','Sen Regular','Arial';
+  font-size: 16px;
+  margin:5px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image:url('../img/luffy.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+
+.form{
+  width:100%;
+  background-image: url('../img/luffy2.png');
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+
+form label{
+  font-size: 40px;
+  color: black;
+}
+
+.boat img{
+  position: absolute;
+  animation: animatedBoat 14s linear infinite, animatedBoat2 3s linear infinite alternate;
+  z-index:-1;
+  width:150px;
+}
+
+.boat1{
+  top:100px;
+}
+
+.boat2{
+  top:1000px;
+}
+
+.boat3{
+  top:1800px;
+}
+
+form input{
+  border: 2px solid var(--text-color);
+  border-radius: 4px;
+  background-color: white;
+  opacity: 0.8;
+  width: 20em;
+  height: 2em;
+  font-family: 'Arial';
+}
+
+form input[type=text], form input[type=email]{
+  background-image: url('../img/luffyHat.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+form input[type=submit]{
+  width:100px;
+  background-color: var(--text-color);
+  color: white;
+  border-color: white;
+}
+
+form input[type=submit]:hover{
+  width:120px;
+  transition-duration: 1s;
+  color: white;
+  border-color: var(--text-color);
+}
+
+form input:hover{
+  transition-duration: 1s;
+}
+
+input:focus {
+  outline: none;
+  background-image: none!important;
+}
+
+footer li{
+  font-size: 44px;
+}
+
+footer a:hover{
+  color: var(--hover);
+}
+
+a{
+  color: var(--light-color);
+}
+
+@keyframes animatedBoat {
+  0% {
+    left:-12%;
+  }
+  50%{
+    left:20%;
+  }
+  51%{
+    left:77%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes animatedBoat2 {
+  from{
+    transform: rotate(-20deg);
+  }
+  to{
+    transform: rotate(5deg);
+  }
+}

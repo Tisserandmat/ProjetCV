@@ -1,0 +1,108 @@
+.ppContact{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.banniere{
+  padding-left: 25%;
+}
+.onePiece{
+  width: 60%;
+}
+
+
+.luffy{
+  border-width: 8px;
+  border-style: ridge;
+  border-color: var(--text-color);
+  width: 500px;
+  margin-left: 100px;
+}
+
+.listecontact {
+  display: flex;
+  font-size: 32px;
+  font-family: Sen;
+  list-style-type: none;
+  align-items: center;
+  flex-direction: column;
+}
+
+.listecontact i{
+  color: var(--text-color);
+  margin: 5px;
+}
+
+.descLuffy {
+  font-family: Sen;
+  font-size: 32px;
+}
+
+
+.descLuffy p {
+  margin: 3%;
+}
+
+.hat{
+  float: right;
+}
+
+.rope2{
+  width: 100%;
+}
+
+@media screen and (max-width: 1301px){
+
+
+  .luffy{
+    width: 60%;
+  }
+
+  .descLuffy{
+    margin: auto;
+  }
+
+  .descLuffy p{
+    font-size: 20px;
+  }
+
+  .body-top{
+    border: none;
+  }
+
+  .ppContact{
+    display: flex;
+    flex-direction: column;
+  }
+  .fruitFeu{
+    display: none;
+  }
+  .banniere{
+    display: none;
+  }
+  .hat{
+    display: none;
+  }
+  .listecontact{
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 901px){
+  .luffy{
+    width: 40%;
+    border-width: 3px;
+    margin-left: 0px;
+  }
+
+  #titre{
+    font-size: 48px;
+  }
+
+  .listecontact img {
+    width: 18px;
+  }
+
+  .listecontact{
+    padding:0px;
+  }
+}
